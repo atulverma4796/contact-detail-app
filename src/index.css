@@ -211,7 +211,7 @@ thead{
   font-size: 17px;
 }
 tr,th,td{
-  border: .0625rem solid black;
+  /* border: .0625rem solid black; */
   padding: 5px;
  text-align: center;
 }
@@ -253,4 +253,7 @@ tbody td{
   border-radius: 5px;
   color: #fff;
   background-color: brown;
+}
+.skeleton{
+  margin-left: 15px;
 }
