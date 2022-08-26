@@ -9,6 +9,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 const ShowContact = () => {
   const [contactData, setContactData] = useState([]);
+  const [message, setMessage] = useState("");
   useEffect(() => {
     let data = JSON.parse(localStorage.getItem("contact"));
     if (data !== null && data.length !== 0) {
@@ -16,6 +17,9 @@ const ShowContact = () => {
         setContactData(data);
       }, 2000);
     }
+    setTimeout(() => {
+      setMessage("No detail found please add!");
+    }, 3000);
   }, []);
 
   const deleteContact = () => {
@@ -98,6 +102,7 @@ const ShowContact = () => {
             )}
           </tbody>
         </table>
+        <h3>{contactData.length !== 0 ? "" : message}</h3>
       </div>
     </>
   );
