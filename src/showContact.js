@@ -36,7 +36,7 @@ const ShowContact = () => {
               // console.log(data)
               // setContactData(data)
               localStorage.setItem("contact", JSON.stringify(data));
-              window.location = "/";
+              window.location = "/showContact";
             }
           },
         },
